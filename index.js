@@ -67,7 +67,7 @@ async function scrapChannel (url) {
 
 
    // sending the mail if stock has lost more than 10 percent
-   if(percentageLoss * 100 < 1000) {
+   if(percentageLoss * 100 > 1000) {
        function sendMail() {
            const mailTransporter = nodemailer.createTransport({
                service: 'gmail',
@@ -138,7 +138,6 @@ async function scrapChannel (url) {
     await browser.close();
 }
 
-// scheduling the job everyday at 10 am and 2 pm
 cron.schedule('* * * * *', async () => {
     console.log('cron is working');
     scrapChannel("https://groww.in/markets/top-losers?index=GIDXNIFTY100");

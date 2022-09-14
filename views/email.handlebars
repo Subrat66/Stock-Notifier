@@ -31,13 +31,25 @@
             padding-top: 10px;
         }
 
-
+        .redirectLink {
+            margin-top: 8px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(10, 172, 98);
+            padding: 10px 25px;
+            border-radius: 6px;
+            border: 2px solid rgb(15, 131, 73);
+            display: block;
+            text-align: center;
+            cursor: pointer;
+        }
     </style>
 
 </head>
 <body>
     <div class="main-box-stk">
-        <p>Hi {{username}}</p>
+        <p>Hi, </p>
 
         <ul>
             <li>Stock: {{stockName}}</li>
@@ -47,6 +59,7 @@
             <li>52week High value: {{highValue}}</li>
         </ul>
 
+        <a class="redirectLink" href="https://www.groww.in" target="_blank">Go to Groww.in</a>
     </div>
     <p class="unsub-text">If you wish to unsubscribe <a href="/">click here</a></p>
 </body>

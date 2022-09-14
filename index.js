@@ -66,8 +66,8 @@ async function scrapChannel (url) {
    console.log(percentageLoss);
 
 
-   // sending the mail if stock has lost more than 10 percent
-   if(percentageLoss * 100 > 1000) {
+   // sending the mail if stock has lost more than 5 percent
+   if(percentageLoss * 100 > 500) {
        function sendMail() {
            const mailTransporter = nodemailer.createTransport({
                service: 'gmail',
